@@ -11,6 +11,6 @@ public class AmingoscodeStringsExample {
         System.out.println(name.contains("ghu"));// this check for the string present in the name
         String code = new String("code");
         System.out.println(name.contains(code));// they give results as boolean
-        System.out.println(name.equals(code));//able to use only objects and returns as boolean
+        System.out.println(name.equals(code));//able to use only objects and returns as boolean type
     }
 }

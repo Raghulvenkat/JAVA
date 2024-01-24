@@ -30,6 +30,13 @@ public class OOPS_02{//outside classes never be static
         
         StaticBlock object2 = outerClass.new StaticBlock();
         System.out.println(StaticBlock.a + " " + StaticBlock.b);
+
+        Singleton singleobj1 = new Singleton();// new obj created
+
+        Singleton singleobj2 = new Singleton();// already one obj is created, so it assigns to singleobj1
+
+        Singleton singleobj3 = new Singleton();// already one obj is created, so it assigns to singleobj1
+
     }
 
     void nonStatic(){
@@ -73,6 +80,23 @@ public class OOPS_02{//outside classes never be static
         static{
             System.out.println("I am inside the static block");
             b = a * 5;
+        }
+    }
+
+    public static class Singleton{
+        //allows you to create only one object in this class
+        private Singleton(){
+
+        }
+        private static Singleton instance;
+
+        public static Singleton getInstance(){
+            //check whether 1 obj is ceated or not
+            if (instance == null){
+                instance = new Singleton();
+            }
+
+            return instance;
         }
     }
 }

@@ -15,6 +15,15 @@ public class OOPS_01 {
         System.out.println(venkat.mark);// it print as 0, because diff argument passed
         student something = raghul;// by this we can assign new obj to existing obj
         System.out.println(something.name);//it print the name of the object 'raghul'
+
+        final int num= 20;// here we use 'final' to lock value (i.e) immutable, but it need to initialized
+        //for primitive data type, tha values are immutable , but for not primitive is can be mutable. (eg)
+        /*
+        final student raghul = new student("Raghul")
+        raghul.name = "Able to mutable"
+
+        raghul = new student("Some name") ->can't able to assign
+         */
     }
 
     //create a class
